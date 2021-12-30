@@ -437,9 +437,32 @@ a {
     background-color: $rose;    
 }
 
-.footer {
+footer {
     background-color: #000;
     height: 110px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 1rem;
+
+    * {
+        display: flex;
+        align-content: center;
+    }
+
+    .logo {
+        padding: 0 125px;
+
+        img {
+            width: 111px;
+        }
+    }
+
+    .rights {
+        line-height: 67px;
+        padding: 0 115px;
+    }
 }
 
 .subscribe {
@@ -468,6 +491,7 @@ a {
         color: #fff;
         display: block;
         font-size: 1rem;
+        font-family: 'Sukhumvit Set', sans-serif;
         margin-bottom: 30px;
         width: calc(50vw - 150px);
         max-width: 560px;
@@ -499,6 +523,11 @@ a {
 }
 
 @media screen and (max-width: 980px) {
+
+    %subscribe-button-style {
+        font-size: 1.4rem;
+    }
+
     html {
         font-size: 12px;
     }
@@ -523,7 +552,7 @@ a {
 
     %align-vertical-grids {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 55vw;
     }
 
     .top {
@@ -587,6 +616,16 @@ a {
         margin: 0;
     }
 
+    .phone-laptop-image {
+        width: 540px;
+        height: 295px;
+        background-size: 700px 509px;
+    }
+
+    .phone-photo-block {
+        order: 2;
+    }
+
     .subscribe {
         display: block;
 
@@ -603,20 +642,35 @@ a {
 
     .schedule-image-and-text {
         @extend %align-vertical-grids;
+        margin: 70px auto 130px;
     }
 
     .make-money {
         @extend %align-vertical-grids;
+        height: unset;
     }
 
     .eyelid-procedure {
         max-width: unset;
         margin-top: 0;
         height: 100%;
+        background-position-y: -2vw;
+        background-size: 105vw;
+        background-position-x: 1px;
+        height: 55vw;
     }
 
     .skill-and-personal {
         display: block;
+        padding: 70px 0 120px;
+
+        .text-item {
+            padding: 0;
+        }
+    }
+
+    .app-block {
+        margin-top: 190px;
     }
 
     .phone-screen {
@@ -627,15 +681,38 @@ a {
     .subscribe-image {
         display: none;
     }
+
+    footer {
+        height: 95px;
+
+        .logo {
+            padding: 0 20px;
+        }
+
+        .rights {
+            line-height: 57px;
+            padding: 0 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 736px) {
     .text-part {
         justify-content: left;
     }
+
+    .phone-laptop-image {
+        width: 400px;
+        height: 219px;
+        background-size: 500px 363px;
+    }
 }
 
 @media screen and (max-width: 480px) {
+    %subscribe-button-style {
+        font-size: 1.8rem;
+    }
+
     html {
         font-size: 10px;
     }
@@ -654,7 +731,7 @@ a {
         }
     }
 
-    .app-store::before .google-play::before {
+    .app-store::before, .google-play::before {
         transform: scale(0.86);
     }
 
@@ -663,7 +740,31 @@ a {
     
             a {
                 font-size: 1.2rem;
+                width: 158px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::before {
+                    padding-right: 7px;
+                    top: 2px;
+                }
             }
         }
+    }
+
+    .phone-laptop-image {
+        height: 183px;
+        width: 335px;
+        background-size: 440px 320px;
+    }
+
+    .schedule-image-and-text {
+        margin: 50px auto 66px;
+    }
+
+    .skill-and-personal {
+        padding: 0 0 70px;
     }
 }

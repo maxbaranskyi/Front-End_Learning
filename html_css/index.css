@@ -589,9 +589,24 @@ a {
   opacity: 0.6;
   background-color: #DCAC9B; }
 
-.footer {
+footer {
   background-color: #000;
-  height: 110px; }
+  height: 110px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 1rem; }
+  footer * {
+    display: flex;
+    align-content: center; }
+  footer .logo {
+    padding: 0 125px; }
+    footer .logo img {
+      width: 111px; }
+  footer .rights {
+    line-height: 67px;
+    padding: 0 115px; }
 
 .subscribe h4 {
   margin-top: 120px; }
@@ -610,6 +625,7 @@ a {
   color: #fff;
   display: block;
   font-size: 1rem;
+  font-family: 'Sukhumvit Set', sans-serif;
   margin-bottom: 30px;
   width: calc(50vw - 150px);
   max-width: 560px;
@@ -625,6 +641,9 @@ a {
   .top .logo img {
     width: 122px; } }
 @media screen and (max-width: 980px) {
+  .top .headline a, .subscribe input[type='submit'], .subscribe select[type='submit'] {
+    font-size: 1.4rem; }
+
   html {
     font-size: 12px; }
 
@@ -644,7 +663,7 @@ a {
 
   .schedule-image-and-text, .make-money {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr; }
+    grid-template-rows: 1fr 55vw; }
 
   .top {
     padding: 0 21px;
@@ -684,6 +703,14 @@ a {
     height: 58.93vw;
     margin: 0; }
 
+  .phone-laptop-image {
+    width: 540px;
+    height: 295px;
+    background-size: 700px 509px; }
+
+  .phone-photo-block {
+    order: 2; }
+
   .subscribe {
     display: block; }
     .subscribe h4 {
@@ -693,24 +720,56 @@ a {
       font-size: 1.4rem;
       margin-bottom: 21px; }
 
+  .schedule-image-and-text {
+    margin: 70px auto 130px; }
+
+  .make-money {
+    height: unset; }
+
   .eyelid-procedure {
     max-width: unset;
     margin-top: 0;
-    height: 100%; }
+    height: 100%;
+    background-position-y: -2vw;
+    background-size: 105vw;
+    background-position-x: 1px;
+    height: 55vw; }
 
   .skill-and-personal {
-    display: block; }
+    display: block;
+    padding: 70px 0 120px; }
+    .skill-and-personal .text-item {
+      padding: 0; }
+
+  .app-block {
+    margin-top: 190px; }
 
   .phone-screen {
     top: -11vw;
     left: 32vw; }
 
   .subscribe-image {
-    display: none; } }
+    display: none; }
+
+  footer {
+    height: 95px; }
+    footer .logo {
+      padding: 0 20px; }
+    footer .rights {
+      line-height: 57px;
+      padding: 0 20px; } }
 @media screen and (max-width: 736px) {
   .text-part {
-    justify-content: left; } }
+    justify-content: left; }
+
+  .phone-laptop-image {
+    width: 400px;
+    height: 219px;
+    background-size: 500px 363px; } }
 @media screen and (max-width: 480px) {
+  .top .headline a, .subscribe input[type='submit'], .subscribe select[type='submit'] {
+    font-size: 1.8rem; }
+
   html {
     font-size: 10px; }
 
@@ -719,10 +778,29 @@ a {
   .top .comming-soon p {
     font-size: 1.2rem; }
 
-  .app-store::before .google-play::before {
+  .app-store::before, .google-play::before {
     transform: scale(0.86); }
 
   .app-block .download-app-links a {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem;
+    width: 158px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .app-block .download-app-links a::before {
+      padding-right: 7px;
+      top: 2px; }
+
+  .phone-laptop-image {
+    height: 183px;
+    width: 335px;
+    background-size: 440px 320px; }
+
+  .schedule-image-and-text {
+    margin: 50px auto 66px; }
+
+  .skill-and-personal {
+    padding: 0 0 70px; } }
 
 /*# sourceMappingURL=index.css.map */
