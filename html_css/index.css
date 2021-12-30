@@ -100,7 +100,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr; }
 
-.top .headline a, .subscribe input[type='submit'], .subscribe select[type='submit'] {
+.subscribe input[type='submit'], .subscribe select[type='submit'], .top .headline a {
   background-color: #DCAC9B;
   color: #000;
   font-weight: 700;
@@ -114,6 +114,22 @@ a {
   position: relative;
   top: 4px;
   padding-right: 10px; }
+
+.subscribe input, .subscribe select {
+  background: none;
+  border-width: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: block;
+  font-size: 1rem;
+  font-family: 'Sukhumvit Set', sans-serif;
+  margin-bottom: 30px;
+  width: calc(50vw - 150px);
+  max-width: 560px;
+  padding: 22px 0; }
+
+.subscribe input::placeholder, .subscribe select::placeholder, .subscribe select {
+  color: #8E8E8E;
+  text-transform: uppercase; }
 
 .app-store::before {
   content: url("img/apple-black-shape-logo-with-a-bite-hole 1.svg"); }
@@ -618,21 +634,8 @@ footer {
   display: grid;
   justify-content: center;
   align-content: center; }
-.subscribe input, .subscribe select {
-  background: none;
-  border-width: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  display: block;
-  font-size: 1rem;
-  font-family: 'Sukhumvit Set', sans-serif;
-  margin-bottom: 30px;
-  width: calc(50vw - 150px);
-  max-width: 560px;
-  padding: 22px 0; }
-  .subscribe input::placeholder, .subscribe select::placeholder {
-    color: #8E8E8E;
-    text-transform: uppercase; }
+.subscribe input {
+  color: #fff; }
 
 @media screen and (max-width: 1280px) {
   html {
@@ -641,7 +644,7 @@ footer {
   .top .logo img {
     width: 122px; } }
 @media screen and (max-width: 980px) {
-  .top .headline a, .subscribe input[type='submit'], .subscribe select[type='submit'] {
+  .subscribe input[type='submit'], .subscribe select[type='submit'], .top .headline a {
     font-size: 1.4rem; }
 
   html {
@@ -767,7 +770,7 @@ footer {
     height: 219px;
     background-size: 500px 363px; } }
 @media screen and (max-width: 480px) {
-  .top .headline a, .subscribe input[type='submit'], .subscribe select[type='submit'] {
+  .subscribe input[type='submit'], .subscribe select[type='submit'], .top .headline a {
     font-size: 1.8rem; }
 
   html {

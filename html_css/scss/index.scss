@@ -70,6 +70,32 @@ a {
     padding-right: 10px;
 }
 
+%input-and-select-styles {
+    background: none;
+        border-width: 0;
+        border-bottom: 1px solid rgba(255,255,255, 0.3);
+        display: block;
+        font-size: 1rem;
+        font-family: 'Sukhumvit Set', sans-serif;
+        margin-bottom: 30px;
+        width: calc(50vw - 150px);
+        max-width: 560px;
+        padding: 22px 0;
+
+        &[type='submit'] {
+            @extend %subscribe-button-style;
+        }
+        
+        &::placeholder {
+            @extend %placeholder-text;
+        }
+}
+
+%placeholder-text {
+    color: $mediumGray;
+    text-transform: uppercase;
+}
+
 .app-store::before {
     content: url('img/apple-black-shape-logo-with-a-bite-hole 1.svg');
     @extend %download-button-style;
@@ -484,27 +510,14 @@ footer {
         align-content: center;
     }
 
-    input, select {
-        background: none;
-        border-width: 0;
-        border-bottom: 1px solid rgba(255,255,255, 0.3);
+    input {
         color: #fff;
-        display: block;
-        font-size: 1rem;
-        font-family: 'Sukhumvit Set', sans-serif;
-        margin-bottom: 30px;
-        width: calc(50vw - 150px);
-        max-width: 560px;
-        padding: 22px 0;
+        @extend %input-and-select-styles;
+    }
 
-        &[type='submit'] {
-            @extend %subscribe-button-style;
-        }
-        
-        &::placeholder {
-            color: $mediumGray;
-            text-transform: uppercase;
-        }
+    select {
+        @extend %input-and-select-styles;
+        @extend %placeholder-text;
     }
 }
 
