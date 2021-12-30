@@ -25,29 +25,50 @@
   font-family: 'Sukhumvit Set';
   font-weight: 700;
   src: url("fonts/SukhumvitSet-Bold/SukhumvitSet-Bold.eot") format("eot"), url("fonts/SukhumvitSet-Bold/SukhumvitSet-Bold.otf") format("opentype"), url("fonts/SukhumvitSet-Bold/SukhumvitSet-Bold.svg") format("svg"), url("fonts/SukhumvitSet-Bold/SukhumvitSet-Bold.ttf") format("truetype"), url("fonts/SukhumvitSet-Bold/SukhumvitSet-Bold.woff") format("woff"); }
-@-moz-keyframes showing-letter {
-  20% {
-    opacity: 1; }
-  90% {
-    opacity: 1; } }
-@-webkit-keyframes showing-letter {
-  20% {
-    opacity: 1; }
-  90% {
-    opacity: 1; } }
-@keyframes showing-letter {
-  20% {
-    opacity: 1; }
-  90% {
-    opacity: 1; } }
+@-moz-keyframes jump-text {
+  25% {
+    transform: translateX(50px); }
+  50% {
+    transform: translateX(0px); }
+  75% {
+    transform: translateX(25px); }
+  100% {
+    transform: translateX(0px); } }
+@-webkit-keyframes jump-text {
+  25% {
+    transform: translateX(50px); }
+  50% {
+    transform: translateX(0px); }
+  75% {
+    transform: translateX(25px); }
+  100% {
+    transform: translateX(0px); } }
+@keyframes jump-text {
+  25% {
+    transform: translateX(50px); }
+  50% {
+    transform: translateX(0px); }
+  75% {
+    transform: translateX(25px); }
+  100% {
+    transform: translateX(0px); } }
+@-moz-keyframes textclip {
+  to {
+    background-position: 200% center; } }
+@-webkit-keyframes textclip {
+  to {
+    background-position: 200% center; } }
+@keyframes textclip {
+  to {
+    background-position: 200% center; } }
 html {
   font-size: 16px;
   font-weight: 300; }
 
 body {
+  overflow-x: hidden;
   font-family: 'Sukhumvit Set', sans-serif;
-  margin: 0;
-  overflow-x: hidden; }
+  margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Saudagar', serif;
@@ -101,9 +122,10 @@ a {
   content: url("img/Frame 2.svg"); }
 
 .top {
-  height: 105vh;
+  height: 111vh;
   background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.72)), url("img/a1b08fcd3f48a95b53a86dd6959062d0.jpeg");
-  background-size: cover;
+  background-size: 130vw;
+  background-position: center;
   display: grid;
   grid-template: repeat(5, 1fr)/repeat(5, 1fr);
   color: #fff;
@@ -125,7 +147,8 @@ a {
       padding: 14px 102px; }
     .top .headline p {
       font-size: 2rem;
-      margin: 0 auto 5.8vh; }
+      margin: 0 auto 5.8vh;
+      line-height: 2rem; }
   .top .comming-soon {
     display: grid;
     grid-column: 2 / span 5;
@@ -143,37 +166,256 @@ a {
   color: #fff;
   text-transform: uppercase; }
 .headline h2 {
-  line-height: 17.19rem;
+  line-height: 15rem;
   margin-bottom: 0px;
-  margin-top: 31.7vh; }
+  margin-top: 40vh; }
   .headline h2 span {
     opacity: 0; }
     .headline h2 span:nth-of-type(1) {
-      -webkit-animation: showing-letter 4s linear -3s infinite;
-      -moz-animation: showing-letter 4s linear -3s infinite;
-      -o-animation: showing-letter 4s linear -3s infinite;
-      animation: showing-letter 4s linear -3s infinite; }
+      --opacity-10-percent: 1;
+      --opacity-20-percent: 1;
+      --opacity-30-percent: 1;
+      --opacity-40-percent: 1;
+      --opacity-50-percent: 1;
+      -webkit-animation: showing-letter 4s linear infinite;
+      -moz-animation: showing-letter 4s linear infinite;
+      -o-animation: showing-letter 4s linear infinite;
+      animation: showing-letter 4s linear infinite; }
+@-moz-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@-webkit-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
     .headline h2 span:nth-of-type(2) {
-      -webkit-animation: showing-letter 3.75s linear -3.25s infinite;
-      -moz-animation: showing-letter 3.75s linear -3.25s infinite;
-      -o-animation: showing-letter 3.75s linear -3.25s infinite;
-      animation: showing-letter 3.75s linear -3.25s infinite; }
+      --opacity-10-percent: 0;
+      --opacity-20-percent: 1;
+      --opacity-30-percent: 1;
+      --opacity-40-percent: 1;
+      --opacity-50-percent: 1;
+      -webkit-animation: showing-letter 4s linear infinite;
+      -moz-animation: showing-letter 4s linear infinite;
+      -o-animation: showing-letter 4s linear infinite;
+      animation: showing-letter 4s linear infinite; }
+@-moz-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@-webkit-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
     .headline h2 span:nth-of-type(3) {
-      -webkit-animation: showing-letter 3.5s linear -3.5s infinite;
-      -moz-animation: showing-letter 3.5s linear -3.5s infinite;
-      -o-animation: showing-letter 3.5s linear -3.5s infinite;
-      animation: showing-letter 3.5s linear -3.5s infinite; }
+      --opacity-10-percent: 0;
+      --opacity-20-percent: 0;
+      --opacity-30-percent: 1;
+      --opacity-40-percent: 1;
+      --opacity-50-percent: 1;
+      -webkit-animation: showing-letter 4s linear infinite;
+      -moz-animation: showing-letter 4s linear infinite;
+      -o-animation: showing-letter 4s linear infinite;
+      animation: showing-letter 4s linear infinite; }
+@-moz-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@-webkit-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
     .headline h2 span:nth-of-type(4) {
-      -webkit-animation: showing-letter 3.25s linear -3.75s infinite;
-      -moz-animation: showing-letter 3.25s linear -3.75s infinite;
-      -o-animation: showing-letter 3.25s linear -3.75s infinite;
-      animation: showing-letter 3.25s linear -3.75s infinite; }
+      --opacity-10-percent: 0;
+      --opacity-20-percent: 0;
+      --opacity-30-percent: 0;
+      --opacity-40-percent: 1;
+      --opacity-50-percent: 1;
+      -webkit-animation: showing-letter 4s linear infinite;
+      -moz-animation: showing-letter 4s linear infinite;
+      -o-animation: showing-letter 4s linear infinite;
+      animation: showing-letter 4s linear infinite; }
+@-moz-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@-webkit-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
     .headline h2 span:nth-of-type(5) {
-      -webkit-animation: showing-letter 3s linear -4s infinite;
-      -moz-animation: showing-letter 3s linear -4s infinite;
-      -o-animation: showing-letter 3s linear -4s infinite;
-      animation: showing-letter 3s linear -4s infinite; }
-
+      --opacity-10-percent: 0;
+      --opacity-20-percent: 0;
+      --opacity-30-percent: 0;
+      --opacity-40-percent: 0;
+      --opacity-50-percent: 1;
+      -webkit-animation: showing-letter 4s linear infinite;
+      -moz-animation: showing-letter 4s linear infinite;
+      -o-animation: showing-letter 4s linear infinite;
+      animation: showing-letter 4s linear infinite; }
+@-moz-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@-webkit-keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
+@keyframes showing-letter {
+  10% {
+    opacity: var(--opacity-10-percent); }
+  20% {
+    opacity: var(--opacity-20-percent); }
+  30% {
+    opacity: var(--opacity-30-percent); }
+  40% {
+    opacity: var(--opacity-40-percent); }
+  50% {
+    opacity: var(--opacity-50-percent); }
+  90% {
+    opacity: 1; } }
 .app-platforms * {
   margin: 0 32px; }
 
@@ -182,11 +424,19 @@ a {
   color: #fff; }
 
 .lash-experst h1 {
+  color: #fff;
   margin: 0 -1.1vw 0;
   font-size: 16.3vw;
   line-height: 15.5vw;
   filter: opacity(0.06);
-  white-space: nowrap; }
+  white-space: nowrap;
+  background-image: linear-gradient(-225deg, #1A1A1A 0%, #8E8E8E 30%, #8E8E8E 100%);
+  background-size: 200% auto;
+  background-clip: border-box;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite; }
 
 .app-block {
   grid-column: 1 / span 2;
@@ -212,6 +462,8 @@ a {
 
 .text-item {
   max-width: 484px; }
+  .text-item:hover h5 {
+    animation: jump-text 1s linear; }
 
 .text-part {
   display: grid;
@@ -363,15 +615,15 @@ a {
   max-width: 560px;
   padding: 22px 0; }
   .subscribe input::placeholder, .subscribe select::placeholder {
-    color: #1A1A1A;
-    text-transform: uppercase; }
-  .subscribe input:hover::placeholder, .subscribe input:active::placeholder, .subscribe select:hover::placeholder, .subscribe select:active::placeholder {
     color: #8E8E8E;
-    transition: color 0.5s ease; }
+    text-transform: uppercase; }
 
 @media screen and (max-width: 1280px) {
   html {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  .top .logo img {
+    width: 122px; } }
 @media screen and (max-width: 980px) {
   html {
     font-size: 12px; }
@@ -390,25 +642,34 @@ a {
   p {
     font-size: 1.4rem; }
 
-  .subscribe, .schedule-image-and-text, .make-money, .skill-and-personal {
-    display: block; }
+  .schedule-image-and-text, .make-money {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr; }
 
   .top {
-    padding: 0 21px; }
+    padding: 0 21px;
+    background-size: cover;
+    height: 100vh; }
     .top .logo {
       grid-column: 1 / span 5;
       justify-content: center; }
+      .top .logo img {
+        width: 98px; }
     .top .headline a {
-      font-size: 1.8rem; }
+      font-size: 1.28rem; }
     .top .headline p {
       font-size: 1.8rem; }
+    .top .headline h2 {
+      margin-top: 28vh; }
     .top .comming-soon {
       grid-column: 1 / sapn 5;
       grid-row: 5;
       justify-content: center; }
 
+  .app-platforms * {
+    margin: 0 3vw; }
+
   .text-part {
-    justify-content: left;
     padding: 40px 20px; }
 
   .expert-to-doors {
@@ -423,12 +684,22 @@ a {
     height: 58.93vw;
     margin: 0; }
 
-  .subscribe h4 {
-    margin-top: 70px; }
-  .subscribe input, .subscribe select {
-    width: calc(100vw - 40px);
-    font-size: 1.4rem;
-    margin-bottom: 21px; }
+  .subscribe {
+    display: block; }
+    .subscribe h4 {
+      margin-top: 70px; }
+    .subscribe input, .subscribe select {
+      width: calc(100vw - 40px);
+      font-size: 1.4rem;
+      margin-bottom: 21px; }
+
+  .eyelid-procedure {
+    max-width: unset;
+    margin-top: 0;
+    height: 100%; }
+
+  .skill-and-personal {
+    display: block; }
 
   .phone-screen {
     top: -11vw;
@@ -436,8 +707,22 @@ a {
 
   .subscribe-image {
     display: none; } }
+@media screen and (max-width: 736px) {
+  .text-part {
+    justify-content: left; } }
 @media screen and (max-width: 480px) {
   html {
-    font-size: 10px; } }
+    font-size: 10px; }
+
+  .top .headline a {
+    font-size: 1.8rem; }
+  .top .comming-soon p {
+    font-size: 1.2rem; }
+
+  .app-store::before .google-play::before {
+    transform: scale(0.86); }
+
+  .app-block .download-app-links a {
+    font-size: 1.2rem; } }
 
 /*# sourceMappingURL=index.css.map */
