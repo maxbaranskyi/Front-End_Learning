@@ -1,6 +1,3 @@
-function sortDescending(phrase) {
-    let splitedPhrase = phrase.split('');
-    splitedPhrase.sort();
-
-    return splitedPhrase.join('');
+function sortDescending(numberToSort) {
+    return parseInt((""+numberToSort).split('').sort((a, b) => b - a).join(''));
 }
