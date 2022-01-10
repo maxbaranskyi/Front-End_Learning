@@ -1,22 +1,17 @@
 class Calculator {
-    constructor(firstNumber, secondNumber) {
-        this.firstNumber = firstNumber;
-        this.secondNumber = secondNumber;
+    add(firstNumber, secondNumber) {
+        return firstNumber + secondNumber;
     }
 
-    add() {
-        return this.firstNumber + this.secondNumber;
+    subtract(firstNumber, secondNumber) {
+        return firstNumber - secondNumber;
     }
 
-    subtract() {
-        return this.firstNumber - this.secondNumber;
+    multiply(firstNumber, secondNumber) {
+        return firstNumber * secondNumber;
     }
 
-    multiply() {
-        return this.firstNumber * this.secondNumber;
-    }
-
-    divide() {
-        return this.firstNumber / this.secondNumber;
+    divide(firstNumber, secondNumber) {
+        return firstNumber / secondNumber;
     }
 }
