@@ -1,0 +1,31 @@
+@mixin show-letter-by-one($duration) {
+    @-moz-keyframes showing-letter {
+        10% { opacity: var(--opacity-10-percent); }
+        20% { opacity: var(--opacity-20-percent); }
+        30% { opacity: var(--opacity-30-percent); }
+        40% { opacity: var(--opacity-40-percent); }
+        50% { opacity: var(--opacity-50-percent); }
+        90% { opacity: 1; }
+    }
+    @-webkit-keyframes showing-letter {
+        10% { opacity: var(--opacity-10-percent); }
+        20% { opacity: var(--opacity-20-percent); }
+        30% { opacity: var(--opacity-30-percent); }
+        40% { opacity: var(--opacity-40-percent); }
+        50% { opacity: var(--opacity-50-percent); }
+        90% { opacity: 1; }
+    }
+    @keyframes showing-letter {
+        10% { opacity: var(--opacity-10-percent); }
+        20% { opacity: var(--opacity-20-percent); }
+        30% { opacity: var(--opacity-30-percent); }
+        40% { opacity: var(--opacity-40-percent); }
+        50% { opacity: var(--opacity-50-percent); }
+        90% { opacity: 1; }
+    }
+
+    -webkit-animation: showing-letter 4s linear infinite;
+    -moz-animation: showing-letter 4s linear infinite;
+    -o-animation: showing-letter 4s linear infinite;
+    animation: showing-letter 4s linear infinite;
+}
