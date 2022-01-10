@@ -1,10 +1,6 @@
 function hasHiddenFee(prices, total) {
-    let rightTotal = 0;
+    let rightTotal = prices.map(item=> parseInt(item.substring(1))).reduce((a,b)=> a+b);
     let totalToCompare = Number.parseFloat(total.substr(1));
-
-    for (let price of prices) {
-        rightTotal += Number.parseFloat(price.substr(1));
-    }
 
     return totalToCompare !== rightTotal;
 }
