@@ -1,13 +1,12 @@
 function trace(matrix) {
     let result = 0;
-    for (let row in matrix) {
-        if (matrix[row].length === matrix.length) {
+    if (matrix.length === 0 || matrix[0].length !== matrix.length) {
+        console.log('Invalid type of matrix')
+    } else {
+        for (let row in matrix) {
             result += matrix[row][row];
-        } else {
-            console.log('Invalid type of matrix')
-            break;
         }
-    }
 
-    return result;
+        return result;
+    }    
 }
