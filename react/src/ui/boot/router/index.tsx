@@ -4,14 +4,17 @@ import App from "../../../App";
 import HomePage from "../../pages/home";
 import Profile from "../../pages/profile";
 
-render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App />}>
-                <Route index element={<HomePage />} />
-                <Route path="profile" element={<Profile />} />
-            </Route>
-        </Routes>
-    </BrowserRouter>,
-    document.getElementById("root")
-)
+const RoutesTree = () => {
+    return (
+        <div>
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<HomePage />} />
+                    <Route path="profile" element={<Profile />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
+};
+
+export default RoutesTree;
