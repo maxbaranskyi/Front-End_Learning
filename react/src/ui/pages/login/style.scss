@@ -1,0 +1,17 @@
+@import "../../style/mixins.scss";
+
+.loginWrapper {
+    max-width: 1112px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.linkstagramOnPhone {
+    img {
+        width: 617px;
+    }
+}
+
+.loginOrRegisterWindow {
+    margin: 0 auto;
+}

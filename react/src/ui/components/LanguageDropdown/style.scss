@@ -1,0 +1,25 @@
+@import '../../style/mixins.scss';
+
+.languageDropdown {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: $white;
+    border: 0.5px solid $gray;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 22px 0;
+}
+
+.dropdownContent {
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 12px 12px;
+    /* TODO: not sure about this top and left*/
+    top: 64px;
+    left: -14px;
+}

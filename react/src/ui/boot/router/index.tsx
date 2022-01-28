@@ -1,19 +1,19 @@
-import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "../../../App";
 import HomePage from "../../pages/home";
+import LoginPage from "../../pages/login";
 import Profile from "../../pages/profile";
+import RegisterPage from "../../pages/register";
 
 const RoutesTree = () => {
     return (
-        <div>
-            <BrowserRouter>
-                <Routes>
-                    <Route index element={<HomePage />} />
-                    <Route path="profile" element={<Profile />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route index element={<HomePage />} />
+                <Route path="profile" element={<Profile />} />
+                <Route path="register" element={<RegisterPage />} />
+                <Route path="login" element={<LoginPage />} />
+            </Routes>
+        </BrowserRouter>
     );
 };
 
