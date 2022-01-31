@@ -1,0 +1,10 @@
+@import './../../style/mixins.scss';
+
+.story {
+    background-color: greenyellow;
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    margin-right: 24px;
+    border: 1px solid $blueGradient;
+}

@@ -2,9 +2,11 @@ import React from 'react';
 import Feed from '../../components/Feed';
 import Sidebar from '../../components/Sidebar';
 
+import './style.scss';
+
 const HomePage = () => {
   return (
-    <div>
+    <div className='homeWrapper'>
       <Feed />
       <Sidebar />
     </div>

@@ -1,0 +1,9 @@
+@import './../../style/mixins.scss';
+
+.homeWrapper {
+    max-width: 1046px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding-top: 33px;
+}

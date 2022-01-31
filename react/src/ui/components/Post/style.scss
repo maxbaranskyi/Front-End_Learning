@@ -1,0 +1,44 @@
+.post {
+    /* TODO: temp styles */
+    width: 560px;
+    height: 740px;
+    margin-bottom: 48px;
+}
+
+.postPhoto {
+    width: 560px;
+    height: 560px;
+    border-radius: 48px;
+    background-color: indigo;
+    margin: 16px 0 20px;
+    overflow: hidden;
+}
+
+.postHeader {
+    display: flex;
+    height: 40px;
+}
+
+.authorAvatar {
+    width: 40px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 12px;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.postDescription {
+    text-align: left;
+}
+
+.postButtons {
+    display: flex;
+}
+
+.shareContainer {
+    margin-left: auto;
+}

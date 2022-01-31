@@ -1,0 +1,10 @@
+.storiesWrapper {
+    background-color: aquamarine;
+}
+
+.storiesList {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    width: fit-content;
+}
