@@ -1,6 +1,8 @@
+$font-path: '/public/fonts' !default;
+
 @font-face {
     font-family: 'Poppins';
-    src: url('./../../public/fonts/Poppins-Medium.eot');
+    src: url('#{$font-path}/Poppins-Medium.eot');
     src: url('./../../public/fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
         url('./../../public/fonts/Poppins-Medium.woff2') format('woff2'),
         url('./../../public/fonts/Poppins-Medium.woff') format('woff'),
