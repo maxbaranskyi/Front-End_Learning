@@ -1,0 +1,64 @@
+@import './../../style/mixins.scss';
+
+.profile {
+    max-width: 1074px;
+    margin: 64px auto 0;
+}
+
+.profilePosts {
+    display: flex;
+    flex-wrap: wrap;
+
+    article {
+        width: 33%;
+        overflow: hidden;
+
+    }
+}
+
+.profilePanel.profileElement {
+    display: flex;
+    margin-bottom: 48px;
+
+    .titleAndDescription {
+        text-align: left;
+        margin-left: 32px;
+
+        span {
+            display: block;
+        }
+    }
+
+    .fullName {
+        font-size: 24px;
+    }
+
+    .jobTitle {
+        font-size: 16px;
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .titleAndDescription {
+        text-align: left;
+    }
+}
+
+.counters {
+    text-align: right;
+    display: flex;
+
+    .number {
+        font-size: 20px;
+    }
+}
+
+.countersAndControlButtons {
+    margin-left: auto;
+}
+
+.controlButtons {
+    display: flex;
+}

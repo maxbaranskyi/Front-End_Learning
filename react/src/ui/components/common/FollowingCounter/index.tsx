@@ -1,10 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import './style.scss';
 
-const FollowingCounter = () => {
+interface Props {
+  styles: string
+}
+
+const FollowingCounter = (props: Props) => {
   return (
-    <div></div>
+    <div className={'followingCounter ' + props.styles}>
+      <NavLink className='followingLink' to='following'>
+        <span className='number'>863</span>
+        <span className='title'>Following</span>
+      </NavLink>
+    </div>
   );
 };
 

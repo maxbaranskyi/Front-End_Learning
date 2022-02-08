@@ -1,0 +1,10 @@
+@import './../../../style/mixins.scss';
+
+.profileDescription {
+    width: 304px;
+
+    p {
+        color: $darkGrey;
+        font-weight: 500;
+    }
+}

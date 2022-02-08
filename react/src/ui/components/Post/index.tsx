@@ -4,6 +4,7 @@ import CommentIcon from './../../../public/images/comment_icon.svg';
 import ShareIcon from './../../../public/images/share_icon.svg';
 
 import './style.scss';
+import { Link } from 'react-router-dom';
 
 // TODO: replace text with other from server
 
@@ -16,8 +17,8 @@ export class Post extends Component {
             <img srcSet='https://fionadiaries.files.wordpress.com/2012/04/hilarious-duck-faces-poses-16.jpeg' />
           </div>
           <div className='authorNameAndPostTime'>
-            <a className="" href="#">Nettie Fernandez</a>
-            <span></span>
+            <Link to="#" className='authorLink'>Nettie Fernandez</Link>
+            <span className='uploadTimePast'>Just now</span>
           </div>
           <div className='postOptions'></div>
         </div>
