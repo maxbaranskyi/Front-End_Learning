@@ -1,0 +1,33 @@
+@import "../../style/mixins.scss";
+
+.header-wrapper {
+    width: 100vw;
+    height: 88px;
+    background: $white;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    padding: 0 64px;
+    box-sizing: border-box;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.logoBlock {
+    width: 105px;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 105px;
+    }
+}
+
+.headerNavigation {
+    max-width: 197px;
+}
+
+.language {
+    margin: 20px 24px;
+}

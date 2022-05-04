@@ -1,0 +1,26 @@
+@import './../../style/mixins.scss';
+
+.sidebarWrapper {
+    width: 304px;
+}
+
+.siteInfoBlock {
+    font-size: 11px;
+    color: $gray;
+
+    a {
+        color: $gray;
+        margin: 0 2px;
+
+        &:hover {
+            color: $darkGrey;
+        }
+    }
+}
+
+.avatarAndCounters {
+    display: flex;
+    justify-content: space-between;
+    width: 304px;
+    margin: 0 auto;
+}

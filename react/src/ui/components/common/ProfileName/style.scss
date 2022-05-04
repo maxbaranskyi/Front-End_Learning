@@ -1,0 +1,13 @@
+@import './../../../style/mixins.scss';
+
+.profileName {
+    font-weight: 500;
+
+    .jobTitle::before {
+        content: "-";
+        margin: 0 8px;
+        color: #808080;
+        font-weight: 700;
+        font-size: 12px;
+    }
+}

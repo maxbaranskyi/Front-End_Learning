@@ -1,0 +1,17 @@
+@import './../../../style/mixins.scss';
+
+label {
+    font-size: 12px;
+    color: $darkGrey;
+    display: block;
+    text-align: left;
+    margin: 4px 0;
+}
+
+input {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid $gray;
+    box-sizing: border-box;
+    border-radius: 12px;
+}

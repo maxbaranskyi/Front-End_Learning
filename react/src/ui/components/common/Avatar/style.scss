@@ -1,0 +1,36 @@
+@import './../../../style/mixins.scss';
+
+.avatar {
+    overflow: hidden;
+    background: $blueGradient;
+
+    &.homeElement {
+        width: 88px;
+        height: 88px;
+        border-radius: 24px;
+
+        img {
+            height: 80px;
+            border-radius: 20px;
+            margin: 2px;
+            border: 2px solid $white;
+            width: 80px;
+        }
+    }
+
+    &.profileElement {
+        width: 116px;
+        height: 116px;
+        border-radius: 31.6364px;
+
+        img {
+            height: 104px;
+            border-radius: 26.3636px;
+            margin: 3px;
+            border: 3px solid #FFF;
+            width: 104px;
+        }
+    }
+
+    
+}

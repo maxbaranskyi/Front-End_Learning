@@ -1,0 +1,11 @@
+@import './../../style/mixins.scss';
+
+p {
+    font-size: 12px;
+    color: $gray;
+}
+
+a {
+    color: $blue; 
+    text-decoration: none;
+}
